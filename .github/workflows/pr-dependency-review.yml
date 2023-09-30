@@ -10,11 +10,8 @@ jobs:
   dependency-review:
     runs-on: ubuntu-latest
     steps:
-      - name: 'Checkout Repository'
-        uses: actions/checkout@v4
-      - name: 'Dependency Review'
-        uses: actions/dependency-review-action@v3
-        with:
-          retry-on-snapshot-warnings: true
-          retry-on-snapshot-warnings-timeout: 600
-          comment-summary-in-pr: always
+    - name: 'Dependency Review'
+      uses: actions/dependency-review-action@v3
+      with:
+        retry-on-snapshot-warnings: true
+        retry-on-snapshot-warnings-timeout: 600
